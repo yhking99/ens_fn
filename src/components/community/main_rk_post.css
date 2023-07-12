@@ -1,0 +1,45 @@
+a {
+  text-decoration: none;
+}
+
+.rk-hot-li {
+  color: #fff;
+  padding: 8px 20px;
+  width: 500px;
+  height: 60px;
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.rk-ranking {
+  font-weight: 500;
+  width: 36px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: italic;
+}
+
+.rk-info {
+  display: inline-block;
+}
+
+.rk-name-time {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.rk-name-time span {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.rk-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 17px;
+}

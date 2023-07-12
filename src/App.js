@@ -13,7 +13,10 @@ import Connectwallet from './pages/connectwallet/connectwallet';
 import Marketcap from './pages/marketcap/marketcap';
 import Makeens from './pages/makeens/makeens';
 import Detail from './pages/makeens/detail';
-import Community from './pages/community/community';
+import Community from './pages/community/community_main';
+import Community_write from './pages/community/community_write';
+import Community_view from './pages/community/community_view';
+import Community_modify from './pages/community/community_modify';
 import { useDispatch } from 'react-redux';
 import { setWalletAddress } from './store/auth';
 
@@ -48,13 +51,19 @@ function App(){
               <Route path="/detail" element={ <Detail/> }></Route>
               <Route path="/marketcap" element={ <Marketcap/> }></Route>
               <Route path="/community" element={ <Community/> }></Route>
+              <Route path="/community/community_view/:id" element={ <Community_view/> }></Route>
+              <Route path="/community_write" element={ <Community_write/> }></Route>
+              <Route path="/community_modify/:id" element={ <Community_modify/> }></Route>
               <Route path="/mypage" element={ <Mypage/> }></Route>
               <Route path="/connectwallet" element={ <Connectwallet/> }></Route>
               <Route path='*' element={<div>not found</div>}></Route>
             </Routes>
         </div>
- 
+
   );
 }
 
 export default App;
+
+// /community/:postId -> 게시글 상세
+// /commnunity/:postId/modify -> 수정

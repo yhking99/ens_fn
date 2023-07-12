@@ -16,7 +16,7 @@ import { setWalletAddress } from '../../store/auth'
 
 
 const Web3 = require('web3');
-const web3 = new Web3("http://172.30.1.72:8545")
+const web3 = new Web3("https://1d61-119-192-224-93.ngrok-free.app/geth/")
 function Connectwallet() {
 
   const dispatch = useDispatch();
@@ -46,7 +46,7 @@ function Connectwallet() {
   const openMetamask = useCallback(async () => {
     alert('window')
     console.log("OPEN METAMASK")
-    const chainId = 777
+    const chainId = 778
 
     console.log('>>>>>>>>>window.ethereum',window.ethereum.networkVersion, chainId)
     if (window.ethereum.networkVersion !== chainId) {
@@ -66,7 +66,7 @@ function Connectwallet() {
                 chainName: 'CUSTOM',
                 chainId: web3.utils.toHex(chainId),
                 nativeCurrency: { name: 'ETH', decimals: 18, symbol: 'ETH' },
-                rpcUrls: ['https://95be-119-192-224-93.ngrok-free.app/gethproxy']
+                rpcUrls: ['https://1d61-119-192-224-93.ngrok-free.app/geth/']
               }
             ]
           });
@@ -122,7 +122,7 @@ function Connectwallet() {
       walletAddress: result
     };
     
-    fetch('http://172.30.1.14:3000', {
+    fetch('https://1d61-119-192-224-93.ngrok-free.app/', {
       method: "post",
       headers :{
         "Content-Type" : "application/json; charset=utf-8"

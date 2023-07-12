@@ -1,0 +1,170 @@
+.Community {
+  color: #fff;
+}
+
+.cm-view-box {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cm-post-box-view {
+  min-height: 230px;
+  padding: 24px 50px;
+}
+
+.cm-user {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 25px;
+}
+
+.cm-us-in {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cm-user-info {
+  display: flex;
+}
+
+.cm-user-info span {
+  margin-right: 15px;
+  font-size: 12px;
+}
+
+.cm-view-ct-info {
+  padding-top: 10px;
+}
+
+.cm-view-title {
+  font-size: 20px;
+  min-height: 30px;
+  margin-bottom: 20px;
+}
+
+.cm-view-content {
+  font-size: 15px;
+  min-height: 60px;
+}
+
+.cm-us-st {
+  display: inline;
+}
+
+.cm-post-btn-list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.post-btn {
+  width: 50px;
+  height: 30px;
+  font-size: 13px;
+  margin-right: 10px;
+  border-radius: 30px;
+  color: #fff;
+  border: 2px solid #ccc;
+  background-color: rgba(69, 83, 104, 0.60);
+}
+
+.post-btn:hover {
+  background-color: #D6EF0E;
+  border : 1px solid #fff;
+  transition: background 0.3s ease-in-out;
+}
+
+.cm-re-btn-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.re-btn {
+  width: 50px;
+  height: 30px;
+  font-size: 13px;
+  margin-right: 10px;
+  border-radius: 30px;
+  color: #fff;
+  border: 2px solid #ccc;
+  background-color: rgba(69, 83, 104, 0.60);
+}
+
+.re-btn:hover {
+  background-color: #D6EF0E;
+  border : 1px solid #fff;
+  transition: background 0.3s ease-in-out;
+}
+
+.cm-us-wallet {
+  font-size: 12px;
+}
+
+
+.post-reply-view {
+  padding: 24px 50px;
+  min-height: 700px;
+}
+
+.reply-write {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  background-color: rgba(69, 83, 104, 0.60);
+}
+
+.rp-wr-user-box {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.rp-wr-txt {
+  overflow: hidden;
+  outline: none;
+  width: 100%;
+  padding: 20px;
+  resize: none;
+  border: none;
+  font-size: 16px;
+  color: #ccc;
+  min-height: 100px;
+  background-color: transparent;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: end;
+}
+
+.reply-btn {
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  background-color: #D6EF0E;
+}
+
+.reply-btn:hover {
+  background-color: #000;
+  border : #fff;
+  transition: background 0.3s ease-in-out;
+}
+
+.rp-list {
+  padding: 20px;
+}
+
+.rp-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.rp-bt {
+  min-height: 50px;
+}
+
