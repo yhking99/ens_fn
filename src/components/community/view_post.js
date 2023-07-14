@@ -5,11 +5,19 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function V_post({title, contents, ensname, created_at, p_id, commentCount}) {
-
+  
   console.log(p_id)
   const navigate = useNavigate();
   
-
+  // 타임 변환
+  const formatTimestamp = () => {
+    const date = new Date(created_at);
+    
+    return date.toLocaleString();
+  };
+  
+  const formattedCreatedAt = formatTimestamp();
+  
 
   const post_modify = () => {
     navigate("/community_modify/"+p_id)
@@ -26,6 +34,7 @@ function V_post({title, contents, ensname, created_at, p_id, commentCount}) {
       });
   };
 
+
   return(
     <div>
       <a>
@@ -34,7 +43,8 @@ function V_post({title, contents, ensname, created_at, p_id, commentCount}) {
           <div className='cm-us-in'>
             <div className='cm-user-info'>
               <span className='v-post-n'>{ensname}</span>
-              <span className='v-post-t'>{created_at}</span>
+              {/* <span className='v-post-t'>{created_at}</span> */}
+              <span className='v-post-t'>{formattedCreatedAt}</span>
             </div>
             <div className='cm-post-btn-list'>
               <button className='post-btn' onClick={() => post_modify()}>수정</button>
@@ -43,8 +53,7 @@ function V_post({title, contents, ensname, created_at, p_id, commentCount}) {
           </div>
             <div className='cm-view-ct-info'>
               <div className="cm-view-id">
-                <p>{p_id}</p>
-                {/* hidden */}
+                <p hidden>{p_id}</p>
               </div>
               <div className="cm-view-title">
                 <p>{title}</p>

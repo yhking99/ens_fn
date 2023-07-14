@@ -38,7 +38,7 @@ function Community_view() {
   useEffect(() => {
     console.log(params)
     if(!params?.id) return;
- 
+
     getData();
   },[params])
 
@@ -63,7 +63,7 @@ if(!data) return null;
             <hr/>
           <div className="post-reply-view">
             {/* 댓글 작성 */}
-            <Reple_write writerId={data.myname?.[0]?.id} onRefresh={() => getData()}/>
+            <Reple_write ensname={data.posts.ensname} writerId={data.myname?.[0]?.id} onRefresh={() => getData()}/>
             {/* 댓글 작성 */}
             {/* 댓글 */}
             {comments.map(v => {

@@ -47,6 +47,13 @@ function Main_post() {
     });
   }, []);
   
+  // 타임 변환
+  const formatTimestamp = (date_map) => {
+    const date = new Date(date_map);
+    
+    return date.toLocaleString();
+  };
+  
 
   return(
     <div>
@@ -58,7 +65,7 @@ function Main_post() {
             <div class="post-info-box">
               <div class="post-info">
                 <span>{a.ensname}</span>
-                <span>{a.created_at}</span>
+                <span>{formatTimestamp(a.created_at)}</span>
               </div>
             </div>
             <div class="main-post-content-box">

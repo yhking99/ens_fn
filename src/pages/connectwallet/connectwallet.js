@@ -44,7 +44,7 @@ function Connectwallet() {
   const isLogin = useIsLogin();
 
   const openMetamask = useCallback(async () => {
-    alert('window')
+    // alert('window')
     console.log("OPEN METAMASK")
     const chainId = 778
 

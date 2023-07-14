@@ -25,12 +25,68 @@ function Post_hot() {
         <li class="rk-hot-li">
           <span class="rk-ranking">1</span>
           <div class="rk-info">
-            <div class="rk-name-time">
+            {/* <div class="rk-name-time">
               <span>name.eth</span>&nbsp;
               <span>time ago</span>
-            </div>
+            </div> */}
             <div class="rk-title">
-              <p>인기 게시글 제목</p>
+              <p>존버하면 망하는 이유</p>
+            </div>
+          </div>
+        </li>
+      </a>
+      <a href="#">
+        <li class="rk-hot-li">
+          <span class="rk-ranking">2</span>
+          <div class="rk-info">
+            {/* <div class="rk-name-time">
+              <span>name.eth</span>&nbsp;
+              <span>time ago</span>
+            </div> */}
+            <div class="rk-title">
+              <p>존버가 무조건 성공하는 이유</p>
+            </div>
+          </div>
+        </li>
+      </a>
+      <a href="#">
+        <li class="rk-hot-li">
+          <span class="rk-ranking">3</span>
+          <div class="rk-info">
+            {/* <div class="rk-name-time">
+              <span>name.eth</span>&nbsp;
+              <span>time ago</span>
+            </div> */}
+            <div class="rk-title">
+              <p>드디어 내려가나</p>
+            </div>
+          </div>
+        </li>
+      </a>
+      <a href="#">
+        <li class="rk-hot-li">
+          <span class="rk-ranking">4</span>
+          <div class="rk-info">
+            {/* <div class="rk-name-time">
+              <span>name.eth</span>&nbsp;
+              <span>time ago</span>
+            </div> */}
+            <div class="rk-title">
+              <p>코인 공부 조언</p>
+            </div>
+          </div>
+        </li>
+      </a>
+      <a href="#">
+        <li class="rk-hot-li">
+          <span class="rk-ranking">5</span>
+          <div class="rk-info">
+            {/* <div class="rk-name-time">
+              <span>name.eth</span>&nbsp;
+              <span>time ago</span>
+            </div> */}
+            <div class="rk-title">
+              <p>더운게 날씨 때문인지 코인 때문인지</p>
             </div>
           </div>
         </li>

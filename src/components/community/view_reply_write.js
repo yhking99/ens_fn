@@ -3,7 +3,7 @@ import { useState } from "react";
 import useWalletAddress from "../../hooks/useWalletAddress";
 import { useParams } from "react-router-dom";
 
-function Reple_write({writerId, onRefresh}) {
+function Reple_write({writerId, onRefresh, ensname}) {
 
   // const walletAddress = useWalletAddress
 
@@ -18,7 +18,7 @@ function Reple_write({writerId, onRefresh}) {
   const handleSubmit = () => {
     if (text.trim() !== '') {
       // axios.post("http://172.30.1.14:3000/board/commentAdd", { content: text, writer_id: writerId, post_id:parseInt( params.id ,10)})
-      axios.post("https://1d61-119-192-224-93.ngrok-free.app/board/commentAdd", { content: text, writer_id: writerId, post_id:parseInt( params.id ,10)})
+      axios.post("https://1d61-119-192-224-93.ngrok-free.app/board/commentAdd", { ensname : ensname, content: text, writer_id: writerId, post_id:parseInt( params.id ,10)})
         .then((response) => {
           const newReply = response.data;
           setText('');
@@ -38,7 +38,7 @@ function Reple_write({writerId, onRefresh}) {
     <div>
       <div className='reply-write'>
         <div className='rp-wr-user-box'>
-          <span className='rp-wr-user-name'>test.eth</span>
+          <span className='rp-wr-user-name'>{ensname}</span>
         </div>
         {/* <form onSubmit={handleSubmit}> */}
         <div>

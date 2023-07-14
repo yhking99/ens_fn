@@ -19,6 +19,7 @@ function Header() {
         <Link to='/makeens'>Make ENS</Link>
         <Link to='/community'>Community</Link>
         <Link to='/marketcap'>MarketCap</Link>
+        <Link to='/mypage'>My Page</Link>
         <Link to='/connectwallet'>Connect Wallet</Link>
     </div>
   );

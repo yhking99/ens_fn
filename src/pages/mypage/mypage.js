@@ -6,6 +6,7 @@ import docs from './img/docs.svg'
 import comment from './img/comment.svg'
 import { Mypagest, Pagetitle, Box, Minibox, Nft, Icon, Myname, Myaddress, Button } from './mypagest';
 import useWalletAddress from '../../hooks/useWalletAddress';
+import axios from 'axios';
 
 export const mypage = [];
 
@@ -15,37 +16,71 @@ function Mypage() {
   const [mypage, setMypage] = useState([]);
   const location = useLocation();
   const walletAddress = useWalletAddress();
+  
+  const [commentsCount, setCommentsCount] = useState(0);
+  const [postsCount, setPostsCount] = useState(0);
+  const [myName, setMyName] = useState();
 
   useEffect(() => {
-    const storedMypage = JSON.parse(localStorage.getItem('mypage')) || [];
-    setMypage(storedMypage);
+    axios.get('https://1d61-119-192-224-93.ngrok-free.app/myPage/commentsAll?wallet='+walletAddress)
+      .then(response => {
+        const count = response.data;
+        setCommentsCount(count);
+        console.log(response);
+        console.log(count);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }, []);
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const inputValue = searchParams.get('inputValue');
+    axios.get('https://1d61-119-192-224-93.ngrok-free.app/myPage/postAll?wallet='+walletAddress)
+      .then(response => {
+        // Access the comments count from the response
+        const count = response.data;
+        setPostsCount(count);
+        console.log(response)
+      })
+    
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
 
-    if (inputValue) {
-      const updatedMypage = [...mypage, inputValue];
-      setMypage(updatedMypage);
-      localStorage.setItem('mypage', JSON.stringify(updatedMypage));
-    }
-  }, [location.search, mypage]);
+  useEffect(() => {
+    axios.get('https://1d61-119-192-224-93.ngrok-free.app/mypage/usingName?wallet='+walletAddress)
+      .then(response => {
+        console.log(response);
+        const eName = response.data[0].name;
+        
+        setMyName(eName);
 
-  // const { copyToClipboard, isCopied } = useClipboard();
+        console.log(response);
+      })
+      
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
 
-  // const handleCopyClick = () => {
-  //   const textToCopy = wallet_address;
-  //   copyToClipboard(textToCopy);
-  // };
-	// const handleCopyClipBoard = async (text: string) => {
-  //   try {
-  //     await navigator.clipboard.writeText(text);
-  //     alert("클립보드에 링크가 복사되었어요.");
-  //   } catch (err) {
-  //     console.log(err);
+  // useEffect(() => {
+  //   const storedMypage = JSON.parse(localStorage.getItem('mypage')) || [];
+  //   setMypage(storedMypage);
+  // }, []);
+
+  // useEffect(() => {
+  //   const searchParams = new URLSearchParams(location.search);
+  //   const inputValue = searchParams.get('inputValue');
+
+  //   if (inputValue) {
+  //     const updatedMypage = [...mypage, inputValue];
+  //     setMypage(updatedMypage);
+  //     localStorage.setItem('mypage', JSON.stringify(updatedMypage));
   //   }
-  // };
+  // }, [location.search, mypage]);
+
+
 
   return (
   <Mypagest>
@@ -53,23 +88,19 @@ function Mypage() {
       MYPAGE
     </Pagetitle>
     <hr />
-    
-    <div>
-
-    </div>
     <Box>
     <h5>INFORMATION</h5>
     <hr/>
-    <Myname>1234.eth</Myname>
+    <Myname>{myName}</Myname>
       <Minibox wi='15vw' he='10vw'>
         <Icon src={docs}/><br/>
-        <p>WROTE</p> 
-        <p>1</p>
+        <p>POST</p> 
+        <p>{postsCount}</p>
       </Minibox>
       <Minibox>
         <Icon src={comment}/><br/>
         <p>COMMENT</p> 
-        <p>1</p> 
+        <p>{commentsCount}</p> 
       </Minibox>
 
       <Myaddress wi='40vw' he='10vw' dp='block'>

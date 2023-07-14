@@ -75,8 +75,17 @@ function Community_write() {
         <div className="post-wr-box">
           <div className="post-user-info">
             <div className='post-user'>
-              <span>{ensname}</span>
+              {/* <span>{ensname}</span> */}
             </div>
+          </div>
+          <div className="post-ensname">
+            <input
+              type='text'
+              className="post-title-input"
+              name="ensname"
+              value={ensname}
+              onChange={(event) => setEnsname(event.target.value)}
+            />
           </div>
           <div className="post-title">
             <input

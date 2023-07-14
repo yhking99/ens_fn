@@ -11,8 +11,17 @@ function Community_modify() {
   const navigate = useNavigate()
   const [data, setData]=useState(null);
 
-const [title, setTitle]=useState('');
-const [contents, setContents] = useState('');
+  const [title, setTitle]=useState('');
+  const [contents, setContents] = useState('');
+
+  const location = useLocation();
+    console.log('state' + location.state);
+
+    const [ensname, setEnsname] = useState(
+      location.state?.data.ensname
+    )
+    console.log('@@@@@@@@@@@@@@@@@@@@@@@@@' + location.state.data.ensname)
+
 
   const walletAddress = useWalletAddress();
 
@@ -28,6 +37,7 @@ const [contents, setContents] = useState('');
 
   setTitle(data.posts.title)
   setContents(data.posts.contents)
+  setEnsname(data.posts.ensname)
 
   setData(data);
 
@@ -67,8 +77,12 @@ const [contents, setContents] = useState('');
             <div class="post-wr-box">
               <div className='post-user-info'>
                 <div className='post-user'>
-                  <span>test.eth</span>
+                  {/* <span>{ensname}</span> */}
                 </div>
+              </div>
+              <div className='post-title'>
+                <input className='post-title-input' name='ensname'
+                value={ensname} onChange={e => setEnsname(e.target.value)} disabled/>
               </div>
               <div className='post-title'>
                 <input className='post-title-input' name='post-title'

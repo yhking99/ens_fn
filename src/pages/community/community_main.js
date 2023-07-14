@@ -24,13 +24,16 @@ function Community() {
       // url : 'http://172.30.1.14:3000/board/writer',
       url : 'https://1d61-119-192-224-93.ngrok-free.app/board/writer',
       data : {
-        wallet : walletAddress
+      wallet : walletAddress
       }
     })
     //   .then(response => {
     //   console.log(response)
     // });
-    const data = {id : result.data.data[0].id, ensname : result.data.data[0].ensname}
+    const data = {
+      id : result.data.data[0].id,
+      ensname : result.data.data[0].ensname
+    }
     navigate('/community_write', {
       state: {
         data : data

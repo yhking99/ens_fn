@@ -12,7 +12,7 @@ function Post_rk() {
         </div>
       </li>
       <li class="rk-hot-li">
-        <span class="rk-ranking">1st</span>
+        <span class="rk-ranking">2st</span>
         <div class="rk-info">
           <div class="rk-title">
             <p>king.eth</p>
@@ -20,7 +20,7 @@ function Post_rk() {
         </div>
       </li>
       <li class="rk-hot-li">
-        <span class="rk-ranking">1st</span>
+        <span class="rk-ranking">3st</span>
         <div class="rk-info">
           <div class="rk-title">
             <p>1225.eth</p>
@@ -28,7 +28,7 @@ function Post_rk() {
         </div>
       </li>
       <li class="rk-hot-li">
-        <span class="rk-ranking">1st</span>
+        <span class="rk-ranking">4st</span>
         <div class="rk-info">
           <div class="rk-title">
             <p>apple.eth</p>
@@ -36,7 +36,7 @@ function Post_rk() {
         </div>
       </li>
       <li class="rk-hot-li">
-        <span class="rk-ranking">1st</span>
+        <span class="rk-ranking">5st</span>
         <div class="rk-info">
           <div class="rk-title">
             <p>coin.eth</p>

@@ -1,7 +1,3 @@
-.Community {
-  color: #fff;
-}
-
 .cm-view-box {
   width: 100%;
   margin-bottom: 30px;
@@ -11,7 +7,7 @@
 
 .cm-post-box-view {
   min-height: 230px;
-  padding: 24px 50px;
+  padding: 24px 70px;
 }
 
 .cm-user {
@@ -45,7 +41,7 @@
 }
 
 .cm-view-content {
-  font-size: 15px;
+  font-size: 23px;
   min-height: 60px;
 }
 
@@ -168,3 +164,4 @@
   min-height: 50px;
 }
 
+.cm-view-id {}

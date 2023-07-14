@@ -103,6 +103,10 @@ body {
   overflow: hidden;
 }
 
+.post-info span {
+  margin-right: 10px;
+}
+
 
 .post-upload {
   margin-top: 40px;

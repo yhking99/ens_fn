@@ -25,10 +25,6 @@ function Marketcap() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
-
   useEffect(() => {
     fetch("https://api.coinpaprika.com/v1/tickers?quotes=KRW")
       .then(response => response.json())
